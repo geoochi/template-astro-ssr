@@ -1,4 +1,4 @@
-# template-astro-ClientRouter-fullstack-SSG-shadcn
+# demo-astro-ClientRouter-fullstack-SSG-shadcn
 
 ## install
 
