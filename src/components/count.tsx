@@ -4,27 +4,19 @@ import { Button } from './ui/button'
 const Count: React.FC = () => {
   const [count, setCount] = useState(0)
 
-  useEffect(() => {
-    fetch('/api')
+  function fetchCount(method: string = 'GET') {
+    fetch('/api', { method: method })
       .then(res => res.json())
       .then(data => {
         setCount(parseInt(data.count))
       })
-  }, [])
+  }
+
+  useEffect(fetchCount, [])
 
   return (
     <>
-      <Button
-        variant='outline'
-        onClick={() => {
-          const newCount = count + 1
-          setCount(newCount)
-          fetch('/api', {
-            method: 'POST',
-            body: JSON.stringify({ count: newCount }),
-          })
-        }}
-      >
+      <Button variant='outline' onClick={() => fetchCount('POST')}>
         count++
       </Button>
       <p>count: {count}</p>

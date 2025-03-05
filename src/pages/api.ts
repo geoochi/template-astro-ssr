@@ -10,8 +10,11 @@ export function GET() {
   })
 }
 
-export async function POST({ request }: { request: Request }) {
-  const data = await request.json()
-  count = parseInt(data.count)
-  return new Response(null)
+export function POST() {
+  count++
+  return new Response(JSON.stringify({ count }, null, 2), {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
 }
