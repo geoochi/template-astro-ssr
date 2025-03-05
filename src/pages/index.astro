@@ -1,14 +1,8 @@
 ---
 import Layout from '@/components/layout.astro'
-import Random from '@/components/random'
-import Navigate from '@/components/navigate'
+import App from '@/app'
 ---
 
-<Layout title='Home'>
-  <h1 class='text-4xl font-bold'>Home</h1>
-  <a href='/about'>Link to About</a>
-  <Navigate client:load destination='/about'>
-    <span>Button to About</span>
-  </Navigate>
-  <Random client:load />
+<Layout title='demo - astro - shadcn - fullstack - client route'>
+  <App client:load />
 </Layout>

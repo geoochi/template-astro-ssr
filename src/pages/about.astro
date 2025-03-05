@@ -1,12 +1,8 @@
 ---
-import Navigate from '@/components/navigate'
 import Layout from '@/components/layout.astro'
 ---
 
-<Layout title='About'>
+<Layout title='about'>
   <h1 class='text-4xl font-bold'>About</h1>
-  <a href='/'>Link to Home</a>
-  <Navigate client:load destination='/'>
-    <span>Button to Home</span>
-  </Navigate>
+  <p>Link to <a class='underline' href='/'>Home</a></p>
 </Layout>
