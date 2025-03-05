@@ -1,8 +1,10 @@
 ---
 import Layout from '@/components/layout.astro'
+import ThemeBlank from '@/components/theme-blank'
 ---
 
 <Layout title='about'>
+  <ThemeBlank client:load />
   <h1 class='text-4xl font-bold'>About</h1>
   <p>Link to <a class='underline' href='/'>Home</a></p>
 </Layout>
